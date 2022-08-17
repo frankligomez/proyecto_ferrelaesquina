@@ -1,0 +1,261 @@
+h2{
+	background:#5893AB;
+	color:black;
+}
+
+
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+/* Mini reset, no margins, paddings or bullets */
+.menu,
+.submenu {
+  margin: 0;
+  padding: 0;
+list-style: none;
+	/*border-radius: 0px;*/
+}
+
+/* Main level */
+.menu {
+  margin: 50px auto;
+  width: 800px;
+  /* http://www.red-team-design.com/horizontal-centering-using-css-fit-content-value */
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+
+	border-color:black;
+}
+
+.menu > li {
+  background: #030A3B;
+  float: left;
+  position: relative;
+  transform: skewX(20deg);
+}
+
+.menu a {
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: Arial, Helvetica;
+  font-size: 14px;
+}
+
+.menu li:hover {
+  background: #C00514;
+}
+
+.menu > li > a {
+  transform: skewX(-25deg);
+  padding: 1em 2em;
+}
+
+/* Dropdown */
+.submenu {
+  position: absolute;
+  width: 200px;
+  left: 50%; margin-left: -100px;
+  transform: skewX(-25deg);
+  transform-origin: left top;
+}
+
+.submenu li {
+  background-color: #34495e;
+  position: relative;
+  overflow: hidden;
+}
+
+.submenu > li > a {
+  padding: 1em 2em;
+}
+
+.submenu > li::after {
+  content: '';
+  position: absolute;
+  top: -125%;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 0 50px rgba(0, 0, 0, .9);
+}
+
+/* Odd stuff */
+.submenu > li:nth-child(odd){
+  transform: skewX(-25deg) translateX(0);
+}
+
+.submenu > li:nth-child(odd) > a {
+  transform: skewX(25deg);
+}
+
+.submenu > li:nth-child(odd)::after {
+  right: -50%;
+  transform: skewX(-25deg) rotate(3deg);
+}
+
+/* Even stuff */
+.submenu > li:nth-child(even){
+  transform: skewX(25deg) translateX(0);
+}
+
+.submenu > li:nth-child(even) > a {
+  transform: skewX(-25deg);
+}
+
+.submenu > li:nth-child(even)::after {
+  left: -50%;
+  transform: skewX(25deg) rotate(3deg);
+}
+
+/* Show dropdown */
+.submenu,
+.submenu li {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.submenu li {
+  transition: .2s ease transform;
+}
+
+.menu > li:hover .submenu,
+.menu > li:hover .submenu li {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu > li:hover .submenu li:nth-child(even){
+  transform: skewX(25deg) translateX(15px);
+}
+
+.menu > li:hover .submenu li:nth-child(odd){
+  transform: skewX(-25deg) translateX(-15px);
+}
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+}
+
+
+.logo{margin-top:-100px;}
+.social {
+	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+	left:5/* Establecemos la barra en la izquierda */
+	top: px; /* Bajamos la barra 200px de arriba a abajo */
+	z-index: 3000 Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+
+	.social ul {
+		list-style: none;
+	}
+
+	.social ul li a {
+		display: inline-block;
+		color:#fff;
+		background: #000;
+		padding: 10px 15px;
+		text-decoration: none;
+		-webkit-transition:all 500ms ease;
+		-o-transition:all 500ms ease;
+		transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+	}
+
+	.social ul li .icon-facebook {background:#3b5998;} /* Establecemos los colores de cada red social, aprovechando su class */
+	.social ul li .icon-twitter {background: #00abf0;}
+	.social ul li .icon-googleplus {background: #d95232;}
+	.social ul li .icon-pinterest {background: #ae181f;}
+	.social ul li .icon-mail {background: #666666;}
+
+	.social ul li a:hover {
+		background: #f; /* Cambiamos el fondo cuando el usuario pase el mouse */
+		padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+	}
+	/*slideshow*/
+
+.slider {
+width: 95%;
+margin: auto;
+overflow: hidden;
+
+}
+
+.slider ul {
+display: flex;
+padding: 0;
+width: 400%;
+animation: cambio 6s infinite alternate linear;
+}
+
+.slider li {
+   width: 1}1000%;
+list-style: none;
+
+}
+
+.slider img {
+width: 100%;
+
+}
+
+@keyframes cambio {
+0% {margin-left: -90;}
+20% {margin-left: -90;}
+
+25% {margin-left: -90%;}
+45% {margin-left: -90%;}
+
+}
+.center{
+margin-right:auto;
+margin-left:auto;
+}
+
+#izquierda,#derecha{
+float:left;
+         }
+
+#principal{
+width:1024px;
+min-height:1024px;
+padding:5px;
+background-color: #3ADFDA ;
+box-shadow: 10px 10px 5px #888888;
+border-radius: 10px;
+}
+body {
+	/*background-image:url("img/ferreteria.jpg");*/
+	background-color:#E8EAF5;
+  font-family: helvetica, arial, serif;
+  font-size: 13px;
+  /*text-transform: uppercase;sirve para poner todo el texto en mayuscula*/
+  text-align: center;
+}
+.logo img{
+	width:200px;
+	height:200px;
+	left:20px;
+
+
+
+}
